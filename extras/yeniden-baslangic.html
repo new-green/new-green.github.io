@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li><a href="../index.html" class="button">Oyun Alanına geri dön</a></li>
-                <li><a href="./learn-more.html" class="button">Hakkında</a></li>
+                <li><a href="./mods.html" class="button">Mod Sayfasına geri dön</a></li>
             </ul>
         </nav>
     </header>
@@ -40,8 +40,9 @@
 
     <script>
         function getRandomChar() {
-            const chars = '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſ';
-
+            //const chars = '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſ';
+            //const chars = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß÷þĀĂĄĆĈĊČĎĐĒĔĖĘĚĜĞĠĢĤĦĨĪĬĮİĲĴĵĶķĹĻĽĿŁŃŅŇŉŊŌŎŐŒœŔŖŘŚŜŞŠŢŤŦŨŪŬŮŰŲŴŶŸŹŻŽſ';
+            const chars = 'QWERTYUOPĞÜASDFGHJKLŞZXCVBNMÖÇÀÁÂÃÄÅÆÈÉÊËÐÑÒÓÔÕØÙÚÛÜÝßĀĂĄĆĈĊČĎĐĒĔĖĘĚĜĞĠĢĤĦĶĹĻĽĿŁŨŪŬŮŰŲŃŅŇŊŌŎŐŒŔŖŘŚŜŞŠŢŤŴŶŸŹŻŽſ' 
             return chars.charAt(Math.floor(Math.random() * chars.length));
         }
 
@@ -61,11 +62,11 @@
             const playerTextElement5 = document.getElementById('playerText5');
 
             if (playerTextElement && playerTextElement2 && playerTextElement3 && playerTextElement4 && playerTextElement5) {
-                const randomChars1 = generateRandomChars(6); // 10 rastgele karakter oluştur
-                const randomChars2 = generateRandomChars(6); // 10 rastgele karakter oluştur
-                const randomChars3 = generateRandomChars(6); // 10 rastgele karakter oluştur
-                const randomChars4 = generateRandomChars(6); // 10 rastgele karakter oluştur
-                const randomChars5 = generateRandomChars(6); // 10 rastgele karakter oluştur
+                const randomChars1 = generateRandomChars(3);
+                const randomChars2 = generateRandomChars(3);
+                const randomChars3 = generateRandomChars(3);
+                const randomChars4 = generateRandomChars(3);
+                const randomChars5 = generateRandomChars(3);
 
                 playerTextElement.textContent = randomChars1;
                 playerTextElement2.textContent = randomChars2;
@@ -78,8 +79,7 @@
         // İlk çalıştırma
         updateMonikaText();
 
-        // Her 250 milisaniyede (0.25 saniyede) bir metni güncelle
-        setInterval(updateMonikaText, 750);
+        setInterval(updateMonikaText, 500);
     </script>
 
 <div class="betternet-wrapper"></div></body></html>
